@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.cloud.stream.annotation.EnableModule;
+import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.Source;
 import org.springframework.context.annotation.Bean;
 import org.springframework.integration.annotation.InboundChannelAdapter;
@@ -34,7 +34,7 @@ import org.springframework.scheduling.support.PeriodicTrigger;
  * @author Dave Syer
  * @author Glenn Renfro
  */
-@EnableModule(Source.class)
+@EnableBinding(Source.class)
 @EnableConfigurationProperties(TimeSourceProperties.class)
 public class TimeSource {
 
